@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://css.gg/arrow-left.css' rel='stylesheet'>
+
+    <title>Agendamentos - FCamara</title>
+</head>
+<body>
+
+    <div id="navbar">
+        <a href="https://www.fcamara.com.br/">Retornar para o FCamera</a>
+    </div>
+
+    <div id="header">
+        <span>Foto por <a href="https://unsplash.com/photos/WBM97UGM0QA">engin akyurt</a> em <a href="https://unsplash.com/">Unsplash</a>. Usada gratuitamente de acordo com a <a href="https://unsplash.com/license">licença.</a></span>
+        <div id="links-header">
+            <h1>Agendamentos</h1>
+            <a id="button-header" href="#right">Agendar agora</a>
+        </div>
+    </div>
+    
+
+    <div id="left">
+        <h3>Cuidados que estamos tomando: </h3>
+        <ul>
+            <li>Sua temperatura será medida na chegada ao escritório.</li>
+            <li>Use máscara dentro de todas as dependências do escritório.</li>
+            <li>As mesas onde você pode trabalhar estão marcadas com um adesivo laranja.</li>
+            <li>Conforme a legislação, estamos funcionando com 40% da capacidade.</li>
+        </ul>
+    </div>
+
+    <div id="right">
+        <h2>Faça o seu agendamento:</h2>
+        <fieldset>
+            <label>Sede: </label>
+            <select required>
+                <option value="">Selecione</option>
+                <option value="São Paulo">São Paulo - Principal</option>
+                <option value="Santos">Santos - Filial</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>Data: </label>
+            <input type="date" required/>
+        </fieldset>
+        <fieldset>
+            <label>Escolha a sua estação de trabalho: </label>
+            <select required>
+                <option value="">Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </fieldset>
+        <button type="submit">Agendar</button>
+    </div>
+</body>
+</html>
