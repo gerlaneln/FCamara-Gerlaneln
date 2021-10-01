@@ -27,6 +27,8 @@ body{
 
 #links-header{
     align-self: flex-start;
+    align-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 10%;
 }
@@ -37,9 +39,18 @@ h1{
     margin: 1em;
 }
 
+#links-header p{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 2em;
+}
+
 #button-header{
     text-decoration: none;
-    background-color: #fc6027;
+    background-color: rgba(0,0,0, 0.4);
+    border: 3px solid #ffffff;
+    color: white;
     padding: 0.8em;
     margin: 3em;
     border: none;
@@ -47,40 +58,75 @@ h1{
     width: 15em;
     font-size: 1.3em;
     text-align: center;
-    color: white;
 }
 
 #button-header:hover{
-    background-color: #ffffff;
+    background-color: none;
     border: 3px solid #fc6027;
-    color: #fc6027;
+    color: white;
     cursor: pointer;
 }
 
 span{
-    text-align: right;
+    text-align: left;
+    margin-left: 3em;
     font-size: 0.6em;
     width: 100%;
     text-decoration: none;
     align-self: flex-end;
+    color: white;
 }
 
-#left{
-    margin-top: 5em;
-    float: left;
-    width: 50%;
+span a{
+    color: white;
+}
+
+#middle{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100vh;
     padding: 2em;
-    background-color: #FDB59B;
+    background-image: url(https://images.unsplash.com/photo-1610494940231-a07875fb25fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#text-left{
+    height: 50%;
+    margin-top: 15em;
+    padding: 2em;
+    background-color: rgba(255,255,255, 0.5);
+}
+
+#middle p{
+    text-align: left;
+    margin-left: 3em;
+    font-size: 0.6em;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    margin-top: 130%;
+}
+
+#middle a{
+    color: white;
 }
 
 li{
-  padding: 0.4em;  
+  padding: 0.8em;  
 }
 
-#right{
-    margin-top: 5em;
-    float: right;
-    width: 30%;
-    padding: 2em;
+#agendar{
+    /*float: right;*/
+    height: 100vh;
     /*background-color: #FDB59B;*/
+}
+
+
+button{
+    background-color: #fc6027;
+    padding: 2em;
+    color: white;
+    text-align: center;
 }
