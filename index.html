@@ -13,21 +13,22 @@
 <body>
 
     <div id="navbar">
-        <a href="https://www.fcamara.com.br/">Retornar para o FCamera</a>
+        <a href="https://www.fcamara.com.br/"><img id="logo" src="https://magento.fcamara.com.br/wp-content/uploads/2021/01/logo-fcamara-laranja-02-1.png" alt="Retornar para o FCamara"/></a>
+        <a href="#middle">Cuidados</a>
+        <a href="#agendar">Agendar</a>
     </div>
 
     <div id="header">
         <span>Foto por <a href="https://unsplash.com/photos/WBM97UGM0QA">engin akyurt</a> em <a href="https://unsplash.com/">Unsplash</a>. Usada gratuitamente de acordo com a <a href="https://unsplash.com/license">licença.</a></span>
         <div id="links-header">
             <h1>Agendamentos</h1>
-            <p>Estamos abertos das 8:00 às 18:00.</p>
-            <a id="button-header" href="#right">Agendar agora</a>
+            <p>Nossos escritórios estarão abertos das 8:00 às 18:00. O agendamento é obrigatório.</p>
+            <a id="button-header" href="#agendar">Agendar agora</a>
         </div>
     </div>
     
     <div id="middle">
         <div id="text-left">
-            <h3>Cuidados que estamos tomando: </h3>
             <ul>
                 <li>Sua temperatura será medida na chegada ao escritório.</li>
                 <li>Use máscara dentro de todas as dependências do escritório.</li>
@@ -48,7 +49,7 @@
         <h2>Faça o seu agendamento:</h2>
         <fieldset>
             <label>Sede: </label>
-            <select required>
+            <select required id="selecionar">
                 <option value="">Selecione</option>
                 <option value="São Paulo">São Paulo - Principal</option>
                 <option value="Santos">Santos - Filial</option>
@@ -60,7 +61,7 @@
         </fieldset>
         <fieldset>
             <label>Escolha a sua estação de trabalho: </label>
-            <select required>
+            <select required id="selecionar">
                 <option value="">Selecione</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

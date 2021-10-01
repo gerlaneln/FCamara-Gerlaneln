@@ -15,6 +15,24 @@ body{
 #navbar{
     width: 100%;
     margin-top: 0;
+    font-weight: 1000;
+}
+
+#logo{
+    width: 30px;
+    height: auto;
+    padding: 0.5em;
+}
+
+#navbar a{
+    margin-left: 1em;
+    text-decoration: none;
+    vertical-align: middle;
+    color: black;
+}
+
+#navbar a:hover{
+    color: #fc6027;
 }
 
 #header{
@@ -27,35 +45,36 @@ body{
 
 #links-header{
     align-self: flex-start;
-    align-content: center;
-    align-items: center;
     width: 100%;
     margin-top: 10%;
 }
 
 h1{
-    text-align: center;
+    text-align: right;
     color: #ffffff;
     margin: 1em;
 }
 
 #links-header p{
-    text-align: center;
+    text-align: right;
     color: white;
     font-size: 1.5em;
-    padding: 2em;
+    padding: 0.8em;
+    margin: 1em;
+    float: right;
 }
 
 #button-header{
     text-decoration: none;
+    text-align: center;
+    float: right;
     background-color: rgba(0,0,0, 0.4);
     border: 3px solid #ffffff;
     color: white;
     padding: 0.8em;
-    margin: 3em;
-    border: none;
+    margin: 1.5em;
+    margin-top: 0;
     border-radius: 25px;
-    width: 15em;
     font-size: 1.3em;
     text-align: center;
 }
@@ -95,8 +114,8 @@ span a{
 #text-left{
     height: 50%;
     margin-top: 15em;
-    padding: 2em;
-    background-color: rgba(255,255,255, 0.5);
+    padding: 1.5em;
+    background-color: rgba(255,255,255);
 }
 
 #middle p{
@@ -104,29 +123,101 @@ span a{
     margin-left: 3em;
     font-size: 0.6em;
     width: 100%;
-    text-decoration: none;
     color: white;
-    margin-top: 130%;
+    margin-top: 160%;
 }
 
 #middle a{
     color: white;
 }
 
+ul{
+    font-size: 1.4em;
+    font-weight: 1000;
+}
+
 li{
-  padding: 0.8em;  
+  padding: 0.5em;  
 }
 
 #agendar{
     /*float: right;*/
     height: 100vh;
+    margin-top: 2%;
     /*background-color: #FDB59B;*/
 }
 
+fieldset{
+    border: none;
+}
+
+label{
+    padding: 5px 5px;
+    box-sizing: border-box;
+    font-weight: 900;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid #fa9069;
+    height: 1.5rem;
+    width: 15%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    font-size: 1.3em;
+    /*box-sizing: border-box;*/
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fc6027;
+}
+
+input:active{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fc6027;
+}
+
+input:hover{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fc6027;
+}
+
+select{
+    width: fit-content;
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 1.2em;
+}
+
+#selecionar{
+    border: none;
+    border-bottom: 2px solid #fa9069;
+    font-size: .9em;
+    padding: .2rem;
+    margin-right: 7px;
+}
+
+#selecionar:hover{
+    border-bottom: 2px solid #fc6027;
+}
+
+#selecionar:focus{
+    outline: none;
+}
+
+#selecionar:active{
+    outline: none;
+}
 
 button{
     background-color: #fc6027;
-    padding: 2em;
+    padding: 1em;
     color: white;
     text-align: center;
+    font-size: 1.3em;
+    border-radius: 25px;
 }
