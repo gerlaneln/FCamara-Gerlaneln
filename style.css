@@ -101,8 +101,7 @@ span a{
 }
 
 #middle{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: block;
     height: 100vh;
     padding: 2em;
     background-image: url(https://images.unsplash.com/photo-1610494940231-a07875fb25fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
@@ -112,19 +111,15 @@ span a{
 }
 
 #text-left{
-    height: 50%;
-    margin-top: 15em;
-    padding: 1.5em;
+    margin-top: 19em;
     background-color: rgba(255,255,255);
 }
 
 #middle p{
     text-align: left;
-    margin-left: 3em;
     font-size: 0.6em;
     width: 100%;
     color: white;
-    margin-top: 160%;
 }
 
 #middle a{
@@ -132,7 +127,7 @@ span a{
 }
 
 ul{
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 1000;
 }
 
@@ -141,9 +136,9 @@ li{
 }
 
 #agendar{
-    /*float: right;*/
-    height: 100vh;
     margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
     /*background-color: #FDB59B;*/
 }
 
@@ -161,7 +156,6 @@ input{
     border: none;
     border-bottom: 2px solid #fa9069;
     height: 1.5rem;
-    width: 15%;
     padding: 5px 5px;
     margin: 8px 0;
     font-size: 1.3em;
@@ -215,9 +209,12 @@ select{
 
 button{
     background-color: #fc6027;
-    padding: 1em;
+    padding: .8em;
     color: white;
     text-align: center;
     font-size: 1.3em;
     border-radius: 25px;
+    width: 100%;
 }
+
+
