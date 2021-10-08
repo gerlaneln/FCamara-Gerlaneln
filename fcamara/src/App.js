@@ -28,7 +28,7 @@ function App() {
           </ul>
         </div>
         <div>
-          <p>Foto por <a href="https://unsplash.com/photos/N2a5NDmT8ls">Chris Greene</a> em <a href="https://unsplash.com/">Unsplash</a>.Usada gratuitamente de acordo com a <a href="https://unsplash.com/license">licença.</a></p>
+          <p>Foto por <a href="https://unsplash.com/photos/N2a5NDmT8ls">Chris Greene</a> em <a href="https://unsplash.com/">Unsplash</a>. Usada gratuitamente de acordo com a <a href="https://unsplash.com/license">licença.</a></p>
         </div>
 
 
