@@ -1,25 +1,31 @@
 import './App.css';
-import { useState } from 'react';
+import { React, useState, useEffect } from 'react';
+import axios from 'axios';
 
-function App() {
+const App = () => {
 
   const [agendamento, setAgendamento] = useState({
     sede: '',
     data: '',
-    estacao: ''
+    estacao: '',
+    email: ''
   });
 
-/*   const agendar () => {
-    <div id="confirmação" className="modal">
-          <div className="modal-content">
-            <span className="close">&times;</span>
-            <p>Confirmação</p>
-            <p>{agendamento.sede}</p>
-            <p>{agendamento.data}</p>
-            <p>{agendamento.estacao}</p>
-          </div>
-          </div>
-  } */
+  const agendar = async (agendamento) => {
+    console.log(agendamento.sede);
+    console.log(agendamento.data);
+    console.log(agendamento.estacao);
+    console.log(agendamento.email);
+    console.log(agendamento);
+    try{
+      const be = await axios.post('http://localhost:8080/register', agendamento);
+      if(be.status === 200){
+        alert('Agendamento realizado com sucesso. Informe seu e-mail na recepção.');
+      }
+    }catch(error){
+      alert('Falha ao realizar agendamento. Entre em contato com o administrador.');
+    }
+  }
 
   return (
     <>
@@ -52,29 +58,35 @@ function App() {
         </div>
       </div>
 
-      <div id="agendar">
+      <div id="agendamento">
         <h2>Faça o seu agendamento:</h2>
+
         <fieldset>
           <label>Sede: </label>
-          <select required id="selecionar" onChange={(e) => {
-            setAgendamento({...agendamento, sede: e.target.value.toString()})
-          }}>
+          <select id="selecionar" onChange={(e) => {
+            console.log(e.target.value);
+            setAgendamento({...agendamento, sede: e.target.value.toString()});
+          }} value={agendamento.sede} required>
             <option value="">Selecione</option>
             <option value="São Paulo">São Paulo - Principal</option>
             <option value="Santos">Santos - Filial</option>
           </select>
         </fieldset>
+
         <fieldset>
           <label>Data: </label>
           <input type="date" required  onChange={(e) => {
-            setAgendamento({...agendamento, data: e.target.value})
-          }}/>
+            console.log(e.target.value);
+            setAgendamento({...agendamento, data: e.target.value});
+          }} value={agendamento.data}/>
         </fieldset>
+
         <fieldset>
           <label>Escolha a sua estação de trabalho: </label>
           <select required id="selecionar" onChange={(e) => {
-            setAgendamento({...agendamento, estacao: e.target.value.toString()})
-          }}>
+            console.log(e.target.value);
+            setAgendamento({...agendamento, estacao: e.target.value.toString()});
+          }} value={agendamento.estacao}>
             <option value="">Selecione</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -88,7 +100,17 @@ function App() {
             <option value="10">10</option>
           </select>
         </fieldset>
-        <button type="submit" onClick={}>Agendar</button>
+
+        <fieldset>
+          <label>E-mail: </label>
+          <input type="email" required onChange={(e) => {
+            console.log(e.target.value);
+            setAgendamento({...agendamento, email: e.target.value});
+            console.log(agendamento);
+          }} value={agendamento.email}/>
+        </fieldset>
+
+        <button type="submit" onClick={() => agendar()}>Agendar</button>
       </div>
     </>
   );
