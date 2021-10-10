@@ -1,6 +1,26 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [agendamento, setAgendamento] = useState({
+    sede: '',
+    data: '',
+    estacao: ''
+  });
+
+/*   const agendar () => {
+    <div id="confirmação" className="modal">
+          <div className="modal-content">
+            <span className="close">&times;</span>
+            <p>Confirmação</p>
+            <p>{agendamento.sede}</p>
+            <p>{agendamento.data}</p>
+            <p>{agendamento.estacao}</p>
+          </div>
+          </div>
+  } */
+
   return (
     <>
       <div id="navbar">
@@ -30,16 +50,15 @@ function App() {
         <div>
           <p>Foto por <a href="https://unsplash.com/photos/N2a5NDmT8ls">Chris Greene</a> em <a href="https://unsplash.com/">Unsplash</a>. Usada gratuitamente de acordo com a <a href="https://unsplash.com/license">licença.</a></p>
         </div>
-
-
-
       </div>
 
       <div id="agendar">
         <h2>Faça o seu agendamento:</h2>
         <fieldset>
           <label>Sede: </label>
-          <select required id="selecionar">
+          <select required id="selecionar" onChange={(e) => {
+            setAgendamento({...agendamento, sede: e.target.value.toString()})
+          }}>
             <option value="">Selecione</option>
             <option value="São Paulo">São Paulo - Principal</option>
             <option value="Santos">Santos - Filial</option>
@@ -47,11 +66,15 @@ function App() {
         </fieldset>
         <fieldset>
           <label>Data: </label>
-          <input type="date" required />
+          <input type="date" required  onChange={(e) => {
+            setAgendamento({...agendamento, data: e.target.value})
+          }}/>
         </fieldset>
         <fieldset>
           <label>Escolha a sua estação de trabalho: </label>
-          <select required id="selecionar">
+          <select required id="selecionar" onChange={(e) => {
+            setAgendamento({...agendamento, estacao: e.target.value.toString()})
+          }}>
             <option value="">Selecione</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -65,9 +88,8 @@ function App() {
             <option value="10">10</option>
           </select>
         </fieldset>
-        <button type="submit">Agendar</button>
+        <button type="submit" onClick={}>Agendar</button>
       </div>
-
     </>
   );
 }
