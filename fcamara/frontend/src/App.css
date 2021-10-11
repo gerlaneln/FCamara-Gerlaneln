@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-/* *{
-    border: 1px solid red;
-} */
+.required:after {
+    content:" *"; 
+    color: red;
+}
 
 html{
     background-color: white;
@@ -135,11 +137,10 @@ li{
   padding: 0.5em;  
 }
 
-#agendamento{
+#form{
     margin-top: 2%;
     margin-left: 25%;
     margin-right: 25%;
-    /*background-color: #FDB59B;*/
 }
 
 fieldset{
@@ -162,19 +163,7 @@ input{
     /*box-sizing: border-box;*/
 }
 
-input:focus{
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #fc6027;
-}
-
-input:active{
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #fc6027;
-}
-
-input:hover{
+input:focus, input:active, input:hover{
     border: none;
     outline: none;
     border-bottom: 2px solid #fc6027;
@@ -190,7 +179,7 @@ select{
 #selecionar{
     border: none;
     border-bottom: 2px solid #fa9069;
-    font-size: .9em;
+    font-size: 1em;
     padding: .2rem;
     margin-right: 7px;
 }
@@ -199,12 +188,12 @@ select{
     border-bottom: 2px solid #fc6027;
 }
 
-#selecionar:focus{
+#selecionar:focus, #selecionar:active{
     outline: none;
 }
 
-#selecionar:active{
-    outline: none;
+#font{
+    font-size: 1em;
 }
 
 button{
@@ -222,4 +211,73 @@ button{
 button:hover{
     background-color: #e23f03;
     cursor: pointer;
+}
+
+footer{
+    margin-top: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fc6027;
+}
+
+footer a{
+    font-family: 'Sacramento', cursive;
+    color: black;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: white;
+}
+
+#sign{
+    font-family: 'Sacramento', cursive;
+}
+
+@media only screen and (max-width: 479px) {
+
+    #header{
+        background-position: center;
+        background-size: auto;
+    }
+
+    span, span a{
+        color: black;
+    }
+    
+    #text-left{
+        margin-top: 6em;
+    }
+
+    #middle p, #middle a{
+        color: black;
+    }
+
+}
+
+@media only screen and (max-width: 357px) {
+
+    #header{
+        background-image: none;
+
+    }
+
+    span, span a{
+        visibility: hidden;
+    }
+    
+    #text-left{
+        margin-top: 6em;
+    }
+
+    #middle p, #middle a{
+        color: black;
+    }
+
 }

@@ -1,10 +1,10 @@
 import './App.css';
-import { React, useState, useEffect } from 'react';
+import { React, useState, } from 'react';
 import axios from 'axios';
 
 const App = () => {
 
-  const [agendamento, setAgendamento] = useState({
+  const [form, setForm] = useState({
     sede: '',
     data: '',
     estacao: '',
@@ -12,13 +12,8 @@ const App = () => {
   });
 
   const agendar = async (agendamento) => {
-    console.log(agendamento.sede);
-    console.log(agendamento.data);
-    console.log(agendamento.estacao);
-    console.log(agendamento.email);
-    console.log(agendamento);
     try{
-      const be = await axios.post('http://localhost:8080/register', agendamento);
+      const be = await axios.post('http://localhost:8080/register', form);
       if(be.status === 200){
         alert('Agendamento realizado com sucesso. Informe seu e-mail na recepção.');
       }
@@ -51,6 +46,7 @@ const App = () => {
             <li>Use máscara dentro de todas as dependências do escritório.</li>
             <li>As mesas onde você pode trabalhar estão marcadas com um adesivo laranja.</li>
             <li>Conforme a legislação, estamos funcionando com 40% da capacidade.</li>
+            <li>Na presença de qualquer sintoma, trabalhe de casa e procure atenção médica.</li>
           </ul>
         </div>
         <div>
@@ -58,15 +54,14 @@ const App = () => {
         </div>
       </div>
 
-      <div id="agendamento">
+      <div id="form">
         <h2>Faça o seu agendamento:</h2>
 
         <fieldset>
-          <label>Sede: </label>
+          <label className="required">Sede: </label>
           <select id="selecionar" onChange={(e) => {
-            console.log(e.target.value);
-            setAgendamento({...agendamento, sede: e.target.value.toString()});
-          }} value={agendamento.sede} required>
+            setForm({...form, sede: e.target.value.toString()});
+          }} value={form.sede} required>
             <option value="">Selecione</option>
             <option value="São Paulo">São Paulo - Principal</option>
             <option value="Santos">Santos - Filial</option>
@@ -74,19 +69,17 @@ const App = () => {
         </fieldset>
 
         <fieldset>
-          <label>Data: </label>
+          <label className="required">Data: </label>
           <input type="date" required  onChange={(e) => {
-            console.log(e.target.value);
-            setAgendamento({...agendamento, data: e.target.value});
-          }} value={agendamento.data}/>
+            setForm({...form, data: e.target.value});
+          }} value={form.data}/>
         </fieldset>
 
         <fieldset>
-          <label>Escolha a sua estação de trabalho: </label>
+          <label className="required">Escolha a sua estação de trabalho: </label>
           <select required id="selecionar" onChange={(e) => {
-            console.log(e.target.value);
-            setAgendamento({...agendamento, estacao: e.target.value.toString()});
-          }} value={agendamento.estacao}>
+            setForm({...form, estacao: e.target.value.toString()});
+          }} value={form.estacao}>
             <option value="">Selecione</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -102,16 +95,18 @@ const App = () => {
         </fieldset>
 
         <fieldset>
-          <label>E-mail: </label>
-          <input type="email" required onChange={(e) => {
-            console.log(e.target.value);
-            setAgendamento({...agendamento, email: e.target.value});
-            console.log(agendamento);
-          }} value={agendamento.email}/>
+          <label className="required">E-mail: </label>
+          <input id="font" type="email" required onChange={(e) => {
+            setForm({...form, email: e.target.value});
+          }} value={form.email}/>
         </fieldset>
 
         <button type="submit" onClick={() => agendar()}>Agendar</button>
       </div>
+
+      <footer>
+        <p>Copyright &copy; FCamara. Made by <a href="https://github.com/gerlaneln" id="sign" target="_blank" rel="noreferrer">gerlaneln</a>.</p>
+      </footer>
     </>
   );
 }
