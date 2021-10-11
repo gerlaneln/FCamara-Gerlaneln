@@ -260,24 +260,3 @@ footer a:hover{
     }
 
 }
-
-@media only screen and (max-width: 357px) {
-
-    #header{
-        background-image: none;
-
-    }
-
-    span, span a{
-        visibility: hidden;
-    }
-    
-    #text-left{
-        margin-top: 6em;
-    }
-
-    #middle p, #middle a{
-        color: black;
-    }
-
-}
