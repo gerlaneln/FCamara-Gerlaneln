@@ -24,8 +24,10 @@
     - CSS
     - JavaScript
     - Node.JS
-    - React
+    - ReactJS
     - MongoDB
+
+---
 
  - Backend disponível em: https://fcamara-backend.herokuapp.com/
  - Repositório para deploy do backend via Heroku: https://github.com/gerlaneln/FCamara-Backend.git
